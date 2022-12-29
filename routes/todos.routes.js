@@ -19,7 +19,6 @@ router.get('/todos/:todoID',async(req,res)=>{
     try {
        todo=await getTodosById(id)
     } catch (error) {
-        console.log(err.message)
         return res.status(500).send({message:'Unexpected id/token send to db server run into error'})
     }
     if(todo){
@@ -37,7 +36,6 @@ router.post('/todos',async(req,res)=>{
     try {
         todo=await addTodos(todoData)
     } catch (error) {
-       console.log(error.message) 
        return res.status(500).send({
         message:'Server ran into error-might be u send todoData entries with wrong data type'
        })
@@ -53,7 +51,6 @@ router.patch('/todos/:todoID',async(req,res)=>{
     try {
       todo=await updateTodoById(id,updatedTodo)
     } catch (error) {
-        console.log(error.message) 
         return res.status(500).send({
          message:'Server ran into error-might be u send todoData entries with wrong data type or id not valid'
         })
@@ -72,7 +69,6 @@ router.delete('/todos/:todoID',async(req,res)=>{
      try {
       todo=await deleteTodobyId(id)
      } catch (error) {
-        console.log(error.message)
         return res.status(500).send({
             message:'Server ran into error-might be u send todoData entries with wrong data type or id not valid'
         })
