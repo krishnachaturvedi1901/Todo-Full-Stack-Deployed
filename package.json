@@ -1,17 +1,19 @@
 {
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^6.8.1"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
   "name": "evaluation-todo-fullstack",
   "description": "- Create a Todo app using MERN stack.",
   "version": "1.0.0",
   "main": "server.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1"
+  }
+
 }
